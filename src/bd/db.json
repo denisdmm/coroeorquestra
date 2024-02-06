@@ -5,9 +5,17 @@
       "nome": "Milagres",
       "musicas": [
         {
-          "id": 1,
-          "cena": "abertura",
-          "nomemusica": "miracles",
+          "numeroCena": 1,
+          "cena": "",
+          "nomemusica": "WHO BUT YOU",
+          "linkMusica": "#",
+          "nomeAudio": "milagres",
+          "linkAudio": "#"
+        },
+        {
+          "numeroCena": 2,
+          "cena": "",
+          "nomemusica": "HOLLY ( JESUS CULTURE)",
           "linkMusica": "#",
           "nomeAudio": "milagres",
           "linkAudio": "#"

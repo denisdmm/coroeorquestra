@@ -8,7 +8,7 @@ import { Autopascoa } from '../models/autopascoa';
 })
 export class AutoPascoaService {
 
-  url = 'http://localhost:3000/cars'; // api rest fake
+  url = 'http://localhost:3000/autospascoa'; // api rest fake
 
   constructor(private httpClient: HttpClient) {}
 
@@ -19,7 +19,7 @@ export class AutoPascoaService {
   }
 
   // Obtem todos os carros
-  getCars(): Observable<Autopascoa[]> {
+  getAutos(): Observable<Autopascoa[]> {
     return this.httpClient.get<Autopascoa[]>(this.url)
       .pipe(
         retry(2),

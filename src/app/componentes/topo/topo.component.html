@@ -9,9 +9,22 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="#">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Auto 2024</a>
+
+
+
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Autos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown"
+          *ngFor="let auto of autosPascoa">
+            <li><a class="nav-link" href="#">{{auto.nome}}</a></li>
+
+          </ul>
         </li>
+
+
 
       </ul>
     </div>
