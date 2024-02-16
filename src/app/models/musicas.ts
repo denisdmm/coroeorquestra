@@ -1,5 +1,5 @@
 export interface Musicas {
-  id: number;
+  numeroCena: number;
   cena: string;
   nomeMusica: string;
   linkMusica: string;

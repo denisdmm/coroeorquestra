@@ -1,11 +1,11 @@
-<div class="container">
-  <div>
+<div class="container" *ngFor="let auto of autosPascoa">
+  <div >
     <figure class="text-center">
       <blockquote class="blockquote">
         <p>Auto de Páscoa 2024</p>
       </blockquote>
       <figcaption class="blockquote-footer">
-        <cite title="Source Title">Milagres</cite>
+        <cite title="Source Title">{{auto.nome}}</cite>
       </figcaption>
     </figure>
   </div>
@@ -20,9 +20,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let auto of autosPascoa">
-          <th scope="row">1</th>
-          <td>{{auto.nome}}</td>
+        <tr *ngFor="let musica of musicas">
+          <th scope="row">{{musica.numeroCena}}</th>
+          <td>{{musica.cena}}</td>
           <td>Otto</td>
           <td>@mdo</td>
         </tr>
