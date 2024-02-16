@@ -1,4 +1,4 @@
-export interface Musicas {
+export interface Musica {
   numeroCena: number;
   cena: string;
   nomeMusica: string;

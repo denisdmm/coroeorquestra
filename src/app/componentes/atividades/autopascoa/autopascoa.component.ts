@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Autopascoa } from 'src/app/models/autopascoa';
-import { Musicas } from 'src/app/models/musicas';
+import { Musica } from 'src/app/models/musica';
 import { AutoPascoaService } from 'src/app/services/auto-pascoa.service';
 
 @Component({
@@ -12,8 +12,8 @@ export class AutopascoaComponent implements OnInit {
 
     autopascoa = {} as Autopascoa;
     autosPascoa:  Autopascoa[] = [];
-    musica = {} as Musicas;
-    musicas : Musicas[] = [];
+    musica = {} as Musica;
+    musicas! : Musica[] ;
 
 
   constructor(

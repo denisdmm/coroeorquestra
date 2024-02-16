@@ -1,9 +1,9 @@
-import { Musicas } from "./musicas";
+import { Musica } from "./musica";
 
 export interface Autopascoa {
     anos: number;
     nome: string;
-    musicas: Musicas
+    musicas?: Musica[]
 
 
 }
