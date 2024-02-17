@@ -3,6 +3,6 @@ export interface Musica {
   cena: string;
   nomeMusica: string;
   linkMusica: string;
-  nomeAudio: string;
-  linkAudio: string;
+  tom: string;
+  status: string
 }

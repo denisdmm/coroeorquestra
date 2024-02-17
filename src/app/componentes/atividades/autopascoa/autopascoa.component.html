@@ -1,4 +1,4 @@
-<div class="container" *ngFor="let auto of autosPascoa">
+<div class="container-lg w-auto p-5" *ngFor="let auto of autosPascoa">
   <div >
     <figure class="text-center">
       <blockquote class="blockquote">
@@ -14,17 +14,17 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Cena</th>
           <th scope="col">Música</th>
-          <th scope="col">Aúdio</th>
+          <th scope="col">Tom</th>
+          <th scope="col">Status</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let musica of auto.musicas">
-          <th scope="row">{{musica.numeroCena}}</th>
-          <td>{{musica.cena}}</td>
-          <td>Otto</td>
-          <td>@mdo</td>
+          <td>{{musica.numeroCena}}</td>
+          <td><a href="{{musica.linkMusica}}" target="_blank" >{{musica.nomeMusica}}</a> </td>
+          <td></td>
+          <td>{{musica.status}}</td>
         </tr>
       </tbody>
     </table>
