@@ -8,13 +8,15 @@ import { TopoComponent } from './componentes/topo/topo.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { AutopascoaComponent } from './componentes/atividades/autopascoa/autopascoa.component';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './componentes/home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopoComponent,
     RodapeComponent,
-    AutopascoaComponent
+    AutopascoaComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
