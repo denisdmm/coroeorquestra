@@ -1,4 +1,4 @@
-<div class="container-lg w-auto p-5" *ngFor="let auto of autosPascoa">
+<div class="container-lg w-auto p-3" *ngFor="let auto of autosPascoa">
   <div >
     <figure class="text-center">
       <blockquote class="blockquote">
@@ -9,24 +9,22 @@
       </figcaption>
     </figure>
   </div>
-  <div class="table-responsive-lg p-5 m-5">
+  <div>
     <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Status</th>
           <th scope="col">Música</th>
-          <th scope="col" colspan="2">Tom</th>
-
+          <th scope="col">Tom</th>
+          <th scope="col">Status</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let musica of auto.musicas">
           <td>{{musica.numeroCena}}</td>
-          <td>{{musica.status}}</td>
           <td><a href="{{musica.linkMusica}}" target="_blank" >{{musica.nomeMusica}}</a> </td>
-          <td colspan="2" class="fw-bold">{{musica.tom}}</td>
-
+          <td>{{musica.tom}}</td>
+          <td>{{musica.status}}</td>
         </tr>
       </tbody>
     </table>
