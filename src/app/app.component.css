@@ -1,0 +1,16 @@
+nav{
+  height:10vh;
+  /*Or fixed pixel unit*/
+ }
+ footer{
+  height:10vh;
+  /*Or fixed pixel unit*/
+ }
+ section {
+   height: 80vh;
+   /* - Height: 100vh - (navheight + footer)
+      - Over flow y make the section scrollable
+   when it exceed the fixed height*/
+   overflow-y: auto;
+   transition: all 0.5s;
+ }
