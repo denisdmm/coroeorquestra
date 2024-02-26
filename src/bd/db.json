@@ -1,8 +1,23 @@
 {
+  "eventos":[
+    {
+    "ano": 2024,
+    "tipoEvento": "Apresentação",
+    "localEvento": "IC Colina",
+    "dataEvento": "25-30 de Abril",
+    "ativo": true,
+    "playlist": "",
+    "Audios": ""
+
+    }
+  ],
   "autospascoa": [
     {
       "ano": 2024,
       "nome": "Milagres",
+      "descricao": "",
+      "localEvento": "IC Colina",
+      "periodoEvento": "25-30 de Março",
       "musicas": [
         {
           "numeroCena": 1,
@@ -113,7 +128,7 @@
           "cena": "",
           "nomeMusica": "ARMS OF GRACE ( TOM D )",
           "linkMusica": "https://www.dropbox.com/scl/fo/b0r2uok81cloyp4ys3am9/h?rlkey=7xsmvz9dweoajfgewcw6uii99&dl=0",
-          "tom": "",
+          "tom": "D",
           "status": "OK"
         },
         {
@@ -127,10 +142,10 @@
         {
           "numeroCena": 16,
           "cena": "",
-          "nomeMusica": "TRILHA JULGAMENTO 2024",
-          "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "nomeMusica": "SHEPET  (JULGAMENTO 2024)",
+          "linkMusica": "https://www.dropbox.com/scl/fo/hzm27csdw10sd9x4pjlyr/h?rlkey=xj3h8cjmbrv06u1fkzm270kfm&dl=0",
+          "tom": "Bb",
+          "status": "OK"
         },
         {
           "numeroCena": 17,
