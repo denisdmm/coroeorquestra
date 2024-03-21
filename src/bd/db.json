@@ -1,14 +1,13 @@
 {
-  "eventos":[
+  "eventos": [
     {
-    "ano": 2024,
-    "tipoEvento": "Apresentação",
-    "localEvento": "IC Colina",
-    "dataEvento": "25-30 de Abril",
-    "ativo": true,
-    "playlist": "",
-    "Audios": ""
-
+      "ano": 2024,
+      "tipoEvento": "Apresentação",
+      "localEvento": "IC Colina",
+      "dataEvento": "25-30 de Abril",
+      "ativo": true,
+      "playlist": "",
+      "Audios": ""
     }
   ],
   "autospascoa": [
@@ -21,178 +20,186 @@
       "musicas": [
         {
           "numeroCena": 1,
-          "cena": "introdução",
+          "cena": "Sai da tua Tenda",
           "nomeMusica": "WHO BUT YOU",
           "linkMusica": "https://www.dropbox.com/scl/fo/qj3fykjx3ehi2e59niy3g/h?rlkey=95ppz93c2lca7ud4xb4vate0e&dl=0",
-          "tom": "",
+          "anotacao": "Não toca do compasso 38 ao 41",
           "status": "OK"
         },
         {
           "numeroCena": 2,
-          "cena": "",
-          "nomeMusica": "HOLLY ( JESUS CULTURE)",
-          "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "cena": "Moisés",
+          "nomeMusica": "HOLLY 2024 ( JESUS CULTURE)",
+          "linkMusica": "https://www.dropbox.com/scl/fo/y4dvr850ahvmphb09olzr/h?rlkey=nzzb8dzlquno923bouvl1v1ec&dl=0",
+          "anotacao": "------",
+          "status": "OK"
         },
         {
           "numeroCena": 3,
-          "cena": "",
+          "cena": "A Fornalha",
           "nomeMusica": "ANOTHER IN THE FIRE",
           "linkMusica": "https://www.dropbox.com/scl/fo/erl1zunyxmmvy47u8kghw/h?rlkey=l4wv7of3vfwp8rcgmxtnohl4f&dl=0",
-          "tom": "",
+          "anotacao": "FAZ A INTRODUÇÃO DUAS VEZES",
           "status": "OK"
         },
         {
           "numeroCena": 4,
-          "cena": "",
+          "cena": "Nascimento",
           "nomeMusica": "THE BIRTHDAY OF THE KING",
           "linkMusica": "https://www.dropbox.com/scl/fo/huu899dijlqp2fobbmgra/h?rlkey=88f5brd4payp7fvu9acfftf0n&dl=0",
-          "tom": "",
+          "anotacao": "------",
           "status": "OK"
         },
         {
           "numeroCena": 5,
-          "cena": "",
+          "cena": "A Expectativa",
           "nomeMusica": "WHEN YOU BELIEVE",
-          "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "linkMusica": "https://www.dropbox.com/scl/fo/dwhu6f8o85wmig35elb58/h?rlkey=yzz950hzua1xu88x6q5g2hyce&dl=0",
+          "anotacao": "------",
+          "status": "OK "
         },
         {
           "numeroCena": 6,
-          "cena": "",
+          "cena": "Casamento em Caná",
           "nomeMusica": "THROUGH HEAVENS EYES",
           "linkMusica": "https://www.dropbox.com/scl/fo/ur8rhjdzjci3er4ku8p94/h?rlkey=3qeiu8ykwzjy12qjsa3vl3iyp&dl=0",
-          "tom": "",
+          "anotacao": "------",
           "status": "OK"
         },
         {
           "numeroCena": 7,
-          "cena": "",
+          "cena": "Curas",
           "nomeMusica": "MIRACLES",
           "linkMusica": "https://www.dropbox.com/scl/fo/jsh2vzknztghicjydsae5/h?rlkey=6g2gsnho0xsh0ybbhsdgk0ebi&dl=0",
-          "tom": "",
+          "anotacao": "------",
           "status": "OK"
         },
         {
           "numeroCena": 8,
-          "cena": "",
+          "cena": "Multiplicações de Pães",
           "nomeMusica": "STARS ( SKILLET)",
           "linkMusica": "https://www.dropbox.com/scl/fo/s2zvhm28l91xvur9085dh/h?rlkey=38y9a4wzepwnv601je4w1pp9h&dl=0",
-          "tom": "",
+          "anotacao": "------",
           "status": "OK"
         },
         {
           "numeroCena": 9,
-          "cena": "",
+          "cena": "Jesus Acalma a tempestade",
           "nomeMusica": "ÁGUAS",
           "linkMusica": "https://www.dropbox.com/scl/fo/yjir1jdurbmqkdy4ftytu/h?rlkey=ebe2cchaxbk1n274ziw6n4tyz&dl=0",
-          "tom": "",
+          "anotacao": "------",
           "status": "OK"
         },
         {
           "numeroCena": 10,
-          "cena": "",
+          "cena": "A Ressureição da filha de Jairo",
           "nomeMusica": "TELL YOUR HEART TO BEAT AGAIN",
           "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "anotacao": "PIANO E BASE",
+          "status": "OK"
         },
         {
-          "numeroCena":11,
-          "cena": "",
+          "numeroCena": 11,
+          "cena": "Vaso de Alabrastro",
           "nomeMusica": "UM MILAGRE SENHOR",
           "linkMusica": "https://www.dropbox.com/scl/fo/k27j7ui5kb2owb8yij2vh/h?rlkey=d15i75egyxmgu346el86tikn9&dl=0",
-          "tom": "",
+          "anotacao": "------",
           "status": "OK"
         },
         {
           "numeroCena": 12,
-          "cena": "",
-          "nomeMusica": "HÁ PODER",
-          "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "cena": "Milagres",
+          "nomeMusica": "HÁ PODER - VERSÃO 2024",
+          "linkMusica": "https://www.dropbox.com/scl/fo/3l0axawuo1xbui9c8zb4l/h?rlkey=d2ij6y7pj0l3d2tr0m1sq6ye7&e=1&dl=0",
+          "anotacao": "------",
+          "status": "OK"
         },
         {
           "numeroCena": 13,
-          "cena": "",
+          "cena": "Entrada em Jerusalém",
           "nomeMusica": "HOSANA WITH BLESSED BE",
           "linkMusica": "https://www.dropbox.com/scl/fo/967ntwnf6frxh9icnosz2/h?rlkey=cwqi43k6o7nkoucuia04d4ocg&dl=0",
-          "tom": "",
+          "anotacao": "------",
           "status": "OK"
         },
         {
           "numeroCena": 14,
-          "cena": "",
+          "cena": "Ceia",
           "nomeMusica": "ARMS OF GRACE ( TOM D )",
           "linkMusica": "https://www.dropbox.com/scl/fo/b0r2uok81cloyp4ys3am9/h?rlkey=7xsmvz9dweoajfgewcw6uii99&dl=0",
-          "tom": "D",
+          "anotacao": "Tom em D",
           "status": "OK"
         },
         {
           "numeroCena": 15,
-          "cena": "",
+          "cena": "Getsêmani",
           "nomeMusica": "ALL FOR LOVE",
           "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "anotacao": "PIANO E BASE",
+          "status": "OK"
         },
         {
           "numeroCena": 16,
-          "cena": "",
+          "cena": "Julgamento",
           "nomeMusica": "SHEPET  (JULGAMENTO 2024)",
           "linkMusica": "https://www.dropbox.com/scl/fo/hzm27csdw10sd9x4pjlyr/h?rlkey=xj3h8cjmbrv06u1fkzm270kfm&dl=0",
-          "tom": "Bb",
+          "anotacao": "VERSAO 2024, TOM Bb",
           "status": "OK"
         },
         {
           "numeroCena": 17,
-          "cena": "",
+          "cena": "Discussão dos Discípulos",
           "nomeMusica": "DISCUSSAO DOS DISCIPULOS - TACET",
           "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "anotacao": "TACET - NÃO TEM MÚSICA",
+          "status": "OK"
         },
         {
           "numeroCena": 18,
-          "cena": "",
+          "cena": "Via Dolorosa",
           "nomeMusica": "CALVARY’S CROSS",
           "linkMusica": "https://www.dropbox.com/scl/fo/hjkyxlksi4vhiw1viftx4/h?rlkey=gdusn99ypvpt77zxt95q0xqcj&dl=0",
-          "tom": "",
+          "anotacao": "------",
           "status": "OK"
         },
         {
           "numeroCena": 19,
-          "cena": "",
+          "cena": "Enterro",
           "nomeMusica": "SAVIOR",
           "linkMusica": "https://www.dropbox.com/scl/fo/ojvedbbexsi25txj6lodv/h?rlkey=9v3144p65uu86igqmnsxo2qvd&dl=0",
-          "tom": "",
+          "anotacao": "------",
+          "status": "OK"
+        },
+        {
+          "numeroCena": 19,
+          "cena": "Enterro ",
+          "nomeMusica": "SAVIOR TRISTE  -Parte B ( CORDAS E VIOLÃO )",
+          "linkMusica": "https://www.dropbox.com/scl/fo/jk8588q3qar33mvbrrag0/h?rlkey=ue4sezjkdt6wbja42o28p22q2&dl=0",
+          "anotacao": " APENAS CORDAS E VIOLÃO",
           "status": "OK"
         },
         {
           "numeroCena": 20,
-          "cena": "",
+          "cena": "Cruz Vazia",
           "nomeMusica": "LET MY SOUL ( GATEWAY )",
-          "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "linkMusica": "https://www.dropbox.com/scl/fo/lukpn54bj97lfw86ovvav/h?rlkey=98ztk6qst16d1ym1wegkmjrbi&dl=0",
+          "anotacao": "TOCAR APENAS 2 COMPASSOS DA INTRODUÇÃO ",
+          "status": "OK"
         },
         {
           "numeroCena": 21,
-          "cena": "",
+          "cena": "Ressureição",
           "nomeMusica": "THE TRUST (BELONGING AND CO",
-          "linkMusica": "#",
-          "tom": "",
-          "status": "Escrevendo"
+          "linkMusica": "https://www.dropbox.com/scl/fo/jvhtrpz0jdixorsj9197d/h?rlkey=x5vgldvzlfsjay7u3jxhbk5lj&dl=0",
+          "anotacao": "------",
+          "status": "OK"
         },
         {
           "numeroCena": 22,
-          "cena": "",
+          "cena": "Finale",
           "nomeMusica": "HE HEIGNS ( NEWBOYS )",
           "linkMusica": "https://www.dropbox.com/scl/fo/uvxu07dk0vmrkhtm4vtvb/h?rlkey=xanf5nuqfakv4bgo7tll86jj5&dl=0",
-          "tom": "",
+          "anotacao": "Repete 2x, na 3ª TACET, na 4ª vez segue pro final",
           "status": "OK"
         }
       ]
