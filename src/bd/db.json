@@ -204,5 +204,65 @@
         }
       ]
     }
+  ],
+  "ensaios": [
+    {
+      "ano": 2024,
+      "nome": "Crescimento",
+      "descricao": "",
+      "localEvento": "Escola de Artes",
+      "periodoEvento": "Todas as Segundas Feira",
+      "mesReferencia" : "Abril",
+      "musicas": [
+        {
+          "numeroCena": 1,
+          "cena": "",
+          "nomeMusica": "GIVE THANKS",
+          "linkMusica": "https://www.dropbox.com/scl/fo/rr4vz2e2hwmcp606sfm9g/ACjzvkXljVa_n2oJh4N66fQ?rlkey=fuk1goobcuut6u4oyij0r927w&dl=0",
+          "anotacao": "------",
+          "status": "OK"
+        },
+        {
+          "numeroCena": 2,
+          "cena": "",
+          "nomeMusica": "HOLLY SPIRIT",
+          "linkMusica": "https://www.dropbox.com/scl/fo/y4dvr850ahvmphb09olzr/h?rlkey=nzzb8dzlquno923bouvl1v1ec&dl=0",
+          "anotacao": "------",
+          "status": "OK"
+        },
+        {
+          "numeroCena": 3,
+          "cena": "",
+          "nomeMusica": "MY TRIBUTE",
+          "linkMusica": "#",
+          "anotacao": "------",
+          "status": "PREPARANDO ARQUIVOS"
+        },
+        {
+          "numeroCena": 4,
+          "cena": "",
+          "nomeMusica": "HAPPY DAY - CAMP KIRK FRANKLIN",
+          "linkMusica": "#",
+          "anotacao": "------",
+          "status": "PREPARANDO ARQUIVOS"
+        },
+        {
+          "numeroCena": 5,
+          "cena": "",
+          "nomeMusica": "TESOURO NORDESTINO",
+          "linkMusica": "https://www.dropbox.com/scl/fo/dwhu6f8o85wmig35elb58/h?rlkey=yzz950hzua1xu88x6q5g2hyce&dl=0",
+          "anotacao": "------",
+          "status": "PREPARANDO ARQUIVOS"
+        },
+        {
+          "numeroCena": 6,
+          "cena": "",
+          "nomeMusica": "EU AVISTO UMA TERRA FELIZ",
+          "linkMusica": "",
+          "anotacao": "------",
+          "status": "PREPARANDO ARQUIVOS"
+        }
+      ]
+    }
   ]
 }

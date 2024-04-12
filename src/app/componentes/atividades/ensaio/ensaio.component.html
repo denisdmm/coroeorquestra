@@ -1,16 +1,16 @@
-<div class="container-lg w-auto p-3">
+<div class="container-lg w-auto p-3" *ngFor="let ensaio of ensaiosAhava">
   <div>
     <figure class="text-center">
       <blockquote class="blockquote">
-        <p>Ensaios 2024</p>
+        <p>Ensaios {{ensaio.ano}}</p>
       </blockquote>
       <figcaption class="blockquote-footer">
-        <cite title="Source Title">Ensaios Orquestra - CRESCIMENTO</cite>
+        <cite title="Source Title">Ensaios Orquestra - {{ensaio.nome}}</cite>
       </figcaption>
     </figure>
   </div>
   <div class="text-left">
-    <h4>ABRIL</h4>
+    <h4>{{ensaio.mesReferencia}}</h4>
   </div>
   <div>
     <table class="table table-striped">
@@ -23,21 +23,12 @@
         </tr>
       </thead>
       <tbody>
-        <tr >
-          <td>#</td>
-          <td><a href="https://www.dropbox.com/scl/fo/rr4vz2e2hwmcp606sfm9g/ACjzvkXljVa_n2oJh4N66fQ?rlkey=fuk1goobcuut6u4oyij0r927w&dl=0"
-            target="_blank" >GIVE THANKS</a> </td>
+        <tr *ngFor="let musica of ensaio.musicas">
+          <td>{{musica.numeroCena}}</td>
+          <td><a href="{{musica.linkMusica}}" target="_blank" >{{musica.nomeMusica}}</a> </td>
           <td class="text-dark"></td>
-          <td>OK</td>
+          <td>{{musica.status}}</td>
         </tr>
-        <tr >
-          <td>#</td>
-          <td><a href="#"
-            >HOLLY SPIRIT</a> </td>
-          <td class="text-dark"></td>
-          <td>Montando Pasta</td>
-        </tr>
-
       </tbody>
     </table>
   </div>

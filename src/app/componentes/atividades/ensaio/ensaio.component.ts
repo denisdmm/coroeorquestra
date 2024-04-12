@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Ensaio } from 'src/app/models/ensaio.model';
+import { Musica } from 'src/app/models/musica';
+import { EnsaioService } from 'src/app/services/ensaio/ensaio.service';
 
 @Component({
   selector: 'app-ensaio',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnsaioComponent implements OnInit {
 
-  constructor() { }
+  ensaio = {} as Ensaio;
+  ensaiosAhava: Ensaio[] = [];
+  musica = {} as Musica;
+  musicas!: Musica[];
+
+  constructor(
+    private ensaioService: EnsaioService
+  ) { }
 
   ngOnInit(): void {
+    this.getEnsaios()
+  }
+
+  // Chama o serviço para obtém todos os ensaios
+  getEnsaios() {
+    this.ensaioService.getEnsaios().subscribe((ensaios: Ensaio[]) => {
+      this.ensaiosAhava = ensaios
+    });
   }
 
 }

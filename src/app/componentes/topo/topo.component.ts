@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Autopascoa } from 'src/app/models/autopascoa';
+import { Ensaio } from 'src/app/models/ensaio.model';
 import { AutoPascoaService } from 'src/app/services/auto-pascoa.service';
+import { EnsaioService } from 'src/app/services/ensaio/ensaio.service';
 
 @Component({
   selector: 'app-topo',
@@ -9,23 +11,18 @@ import { AutoPascoaService } from 'src/app/services/auto-pascoa.service';
 })
 export class TopoComponent implements OnInit {
   autopascoa = {} as Autopascoa;
-  autosPascoa:  Autopascoa[] = [];
+  autosPascoa: Autopascoa[] = [];
+  ensaio = {} as Ensaio;
+  ensaiosAhava: Ensaio[] = [];
 
   constructor(
-    private autopascoaService : AutoPascoaService
-   ) { }
+    private autopascoaService: AutoPascoaService,
+    private ensaioService: EnsaioService
+  ) { }
 
   ngOnInit(): void {
-    this.getAutos()
-
 
   }
 
-      // Chama o serviço para obtém todos os autos
-      getAutos() {
-        this.autopascoaService.getAutos().subscribe((autos: Autopascoa[]) => {
-          this.autosPascoa = autos
-        });
-      }
 
 }
