@@ -10,6 +10,7 @@ import { AutopascoaComponent } from './componentes/atividades/autopascoa/autopas
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './componentes/home/home.component';
 import { EnsaioComponent } from './componentes/atividades/ensaio/ensaio.component';
+import { CultoComponent } from './componentes/atividades/culto/culto.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EnsaioComponent } from './componentes/atividades/ensaio/ensaio.componen
     RodapeComponent,
     AutopascoaComponent,
     HomeComponent,
-    EnsaioComponent
+    EnsaioComponent,
+    CultoComponent,
   ],
   imports: [
     BrowserModule,

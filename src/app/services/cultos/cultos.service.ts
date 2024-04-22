@@ -1,36 +1,33 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, catchError, retry, throwError } from 'rxjs';
-import { Autopascoa } from '../models/autopascoa';
+import { Culto } from 'src/app/models/culto.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AutoPascoaService {
+export class CultosService {
 
-  //rl = 'http://localhost:3000/autospascoa'; // api rest fake
-  url = 'https://my-json-server.typicode.com/denisdmm/dbjsonahava/autospascoa'; // api rest fake
-
-
+  //url = 'http://localhost:3000/cultos'; // api rest fake
+  url = 'https://my-json-server.typicode.com/denisdmm/dbjsoncultosahava/cultos'; // api rest fake
 
 
-  constructor(private httpClient: HttpClient) {}
+  constructor(private httpClient: HttpClient) { }
 
-
-  // Headers
-  httpOptions = {
+   // Headers
+   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
-  // Obtem todos os carros
-  getAutos(): Observable<Autopascoa[]> {
-    return this.httpClient.get<Autopascoa[]>(this.url)
+  // Obtem todos os cultos
+  getCultos(): Observable<Culto[]> {
+    return this.httpClient.get<Culto[]>(this.url)
       .pipe(
         retry(2),
         catchError(this.handleError))
   }
 
-  // Manipulação de erros
+
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
@@ -43,6 +40,7 @@ export class AutoPascoaService {
     console.log(errorMessage);
     return throwError(errorMessage);
   };
-}
 
+
+}
 
