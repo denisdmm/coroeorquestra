@@ -8,7 +8,7 @@ import { Autopascoa } from '../models/autopascoa';
 })
 export class AutoPascoaService {
 
-  //rl = 'http://localhost:3000/autospascoa'; // api rest fake
+  //url = 'http://localhost:3000/autospascoa'; // api rest fake
   url = 'https://my-json-server.typicode.com/denisdmm/dbjsonahava/autospascoa'; // api rest fake
 
 
