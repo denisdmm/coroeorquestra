@@ -1,6 +1,7 @@
 import { Musica } from "./musica";
 
 export interface Culto {
+    id: number;
     ano: number;
     nome: string;
     descricao: string;

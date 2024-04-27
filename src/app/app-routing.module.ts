@@ -4,12 +4,14 @@ import { AutopascoaComponent } from './componentes/atividades/autopascoa/autopas
 import { HomeComponent } from './componentes/home/home.component';
 import { EnsaioComponent } from './componentes/atividades/ensaio/ensaio.component';
 import { CultoComponent } from './componentes/atividades/culto/culto.component';
+import { CultoDetailComponent } from './componentes/atividades/culto/culto-detail/culto-detail.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'autospascoa', component: AutopascoaComponent},
     { path: 'ensaios', component: EnsaioComponent},
-    { path: 'cultos', component: CultoComponent}
+    { path: 'cultos', component: CultoComponent},
+    { path: 'cultos/:id', component: CultoDetailComponent},
 ];
 
 @NgModule({

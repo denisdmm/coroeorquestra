@@ -212,7 +212,7 @@
       "descricao": "",
       "localEvento": "Escola de Artes",
       "periodoEvento": "Todas as Segundas Feira",
-      "mesReferencia" : "Abril",
+      "mesReferencia": "Abril",
       "musicas": [
         {
           "numeroCena": 1,
@@ -265,15 +265,15 @@
       ]
     }
   ],
-
   "cultos": [
     {
+      "id": 1,
       "ano": 2024,
       "nome": "Abertura Pentecostes",
       "descricao": "Mensagem: O Poder Sobrenatural do Jejum",
       "localEvento": "IC Colina",
       "periodoEvento": "05 de Abril - 4 cultos",
-      "mesReferencia" : "Abril",
+      "mesReferencia": "Abril",
       "musicas": [
         {
           "numeroCena": 1,
@@ -332,8 +332,25 @@
           "status": "OK"
         }
       ]
+    },
+    {
+      "id": 2,
+      "ano": 2024,
+      "nome": "CIDADE CONFERENCE",
+      "descricao": "Abertura da CIDADE CONFERENCE",
+      "localEvento": "IC Colina",
+      "periodoEvento": "30 de Maio - Abertura",
+      "mesReferencia": "Maio",
+      "musicas": [
+        {
+          "numeroCena": 1,
+          "cena": "ABERTURA",
+          "nomeMusica": "The God Who Sees",
+          "linkMusica": "#",
+          "anotacao": "",
+          "status": "OK"
+        }
+      ]
     }
   ]
-
-
 }

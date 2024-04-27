@@ -8,14 +8,14 @@ import { Culto } from 'src/app/models/culto.model';
 })
 export class CultosService {
 
-  //url = 'http://localhost:3000/cultos'; // api rest fake
-  url = 'https://my-json-server.typicode.com/denisdmm/dbjsoncultosahava/cultos'; // api rest fake
+  url = 'http://localhost:3000/cultos'; // api rest fake
+  //url = 'https://my-json-server.typicode.com/denisdmm/dbjsoncultosahava/cultos'; // api rest fake
 
 
   constructor(private httpClient: HttpClient) { }
 
-   // Headers
-   httpOptions = {
+  // Headers
+  httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   }
 
@@ -26,6 +26,15 @@ export class CultosService {
         retry(2),
         catchError(this.handleError))
   }
+
+  getCultosId(id: number): Observable<Culto[]> {
+
+    return this.httpClient.get<Culto[]>(this.url +'/'+id)
+      .pipe(
+        retry(2),
+        catchError(this.handleError))
+  }
+
 
 
   handleError(error: HttpErrorResponse) {
