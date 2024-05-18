@@ -1,0 +1,37 @@
+<div class="container-lg w-auto p-3" *ngFor="let cultoDetail of cultosDetailAhava">
+  <div>
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <p>Cultos {{cultoDetail.ano}}</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        <cite title="Source Title">Cultos Orquestra - {{cultoDetail.nome}}</cite>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="text-left">
+    <h4>{{cultoDetail.mesReferencia}}</h4>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Música</th>
+          <th scope="col">Anotações</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let musica of cultoDetail.musicas">
+          <td>{{musica.numeroCena}}</td>
+          <td><a href="{{musica.linkMusica}}" target="_blank" >{{musica.nomeMusica}}</a> </td>
+          <td class="text-dark"></td>
+          <td>{{musica.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>

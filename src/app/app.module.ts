@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './componentes/home/home.component';
 import { EnsaioComponent } from './componentes/atividades/ensaio/ensaio.component';
 import { CultoComponent } from './componentes/atividades/culto/culto.component';
+import { CultoDetailComponent } from './componentes/atividades/culto/culto-detail/culto-detail.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CultoComponent } from './componentes/atividades/culto/culto.component';
     HomeComponent,
     EnsaioComponent,
     CultoComponent,
+    CultoDetailComponent,
   ],
   imports: [
     BrowserModule,

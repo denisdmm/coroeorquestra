@@ -24,17 +24,20 @@
 
           </ul>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" >
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
             Cultos
           </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/cultos">IC - Colina 05-04-2024</a></li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" *ngFor="let culto of cultosAhava">
+            <ng-container *ngFor="let culto of cultosAhava">
+            <li [hidden]="!isCultoAtivo(culto)" >
+              <a class="dropdown-item" href="/cultos/{{culto.id}}"> {{culto.localEvento +"/"+
+               culto.datasEvento +
+               culto.mesReferencia  }} </a>
 
+            <hr class="dropdown-divider"></li>
+            </ng-container>
           </ul>
         </li>
 

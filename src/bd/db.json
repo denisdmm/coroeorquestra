@@ -212,7 +212,7 @@
       "descricao": "",
       "localEvento": "Escola de Artes",
       "periodoEvento": "Todas as Segundas Feira",
-      "mesReferencia" : "Abril",
+      "mesReferencia": "Abril",
       "musicas": [
         {
           "numeroCena": 1,
@@ -268,12 +268,15 @@
 
   "cultos": [
     {
+      "id": 1,
+      "ativo": false,
       "ano": 2024,
       "nome": "Abertura Pentecostes",
       "descricao": "Mensagem: O Poder Sobrenatural do Jejum",
       "localEvento": "IC Colina",
       "periodoEvento": "05 de Abril - 4 cultos",
-      "mesReferencia" : "Abril",
+      "mesReferencia": "Abril",
+      "datasEvento": "05",
       "musicas": [
         {
           "numeroCena": 1,
@@ -332,8 +335,89 @@
           "status": "OK"
         }
       ]
+    },
+    {
+      "id": 2,
+      "ativo":true,
+      "ano": 2024,
+      "nome": "CIDADE CONFERENCE",
+      "descricao": "Abertura da CIDADE CONFERENCE",
+      "localEvento": "IC Colina",
+      "periodoEvento": "30 de Maio - Abertura",
+      "mesReferencia": "Maio",
+      "datasEvento": "30",
+      "musicas": [
+        {
+          "numeroCena": 1,
+          "cena": "",
+          "nomeMusica": "PRAISE",
+          "linkMusica": "https://www.dropbox.com/scl/fo/d1b1a6uaz2tl1hcy18cpw/AIkmxJTRdqtgA7W3kfnvvTI?rlkey=xlrcpguk0slu95wiqlp626w3j&st=ajn7zbmu&dl=0",
+          "anotacao": "TOM A",
+          "status": "OK"
+        },
+        {
+          "numeroCena": 2,
+          "cena": "",
+          "nomeMusica": "HERE OUR PRAISES ( Garry Hodes )",
+          "linkMusica": "https://www.dropbox.com/scl/fo/5d9wxyids0quygtvzrw5y/AOFJNJY-nz60v5lXa12-jXA?rlkey=hofn6e3f42907rpr0loigakfw&st=r59qy6eg&dl=0",
+          "anotacao": "------",
+          "status": "OK"
+        },
+        {
+          "numeroCena": 3,
+          "cena": "",
+          "nomeMusica": "HOLLY 2024 ( JESUS CULTURE)",
+          "linkMusica": "https://www.dropbox.com/scl/fo/y4dvr850ahvmphb09olzr/h?rlkey=nzzb8dzlquno923bouvl1v1ec&dl=0",
+          "anotacao": "------",
+          "status": "OK"
+        },
+        {
+          "numeroCena": 4,
+          "cena": "Curas",
+          "nomeMusica": "MIRACLES",
+          "linkMusica": "https://www.dropbox.com/scl/fo/jsh2vzknztghicjydsae5/h?rlkey=6g2gsnho0xsh0ybbhsdgk0ebi&dl=0",
+          "anotacao": "------",
+          "status": "OK"
+        },
+        {
+          "numeroCena": 5,
+          "cena": "",
+          "nomeMusica": "GOD OF REVIVAL(Deus do Avivamento)",
+          "linkMusica": "https://www.dropbox.com/scl/fo/e76nypdgs1kssb196w0pv/AGqJSOVgRAaoadzfYo8OZRw?rlkey=1kd4asna2su4q8y6ur4mbw05f&st=4mikku14&dl=0",
+          "anotacao": "------",
+          "status": "OK"
+        },
+        {
+          "numeroCena": 6,
+          "cena": "",
+          "nomeMusica": "HE HEIGNS ( NEWBOYS )",
+          "linkMusica": "https://www.dropbox.com/scl/fo/uvxu07dk0vmrkhtm4vtvb/h?rlkey=xanf5nuqfakv4bgo7tll86jj5&dl=0",
+          "anotacao": "Repete 2x, na 3ª TACET, na 4ª vez segue pro final",
+          "status": "OK"
+        }
+
+      ]
+    },
+    {
+      "id": 3,
+      "ativo":true,
+      "ano": 2024,
+      "nome": "AUTO IN CONCERT",
+      "descricao": "Auto de Páscoa IN CONCERT",
+      "localEvento": "IC Colina",
+      "periodoEvento": "01 de Junho",
+      "mesReferencia": "Junho",
+      "datasEvento": "01",
+      "musicas": [
+        {
+          "numeroCena": 1,
+          "cena": "",
+          "nomeMusica": "",
+          "linkMusica": "#",
+          "anotacao": "",
+          "status": "PREPARANDO ARQUIVOS"
+        }
+      ]
     }
   ]
-
-
 }
