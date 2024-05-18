@@ -31,4 +31,9 @@ cultos: any;
     }
 
 
+    isCultoAtivo(culto: Culto): boolean {
+      return culto.ativo;
+    }
+
+
 }

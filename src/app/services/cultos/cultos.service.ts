@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, retry, throwError } from 'rxjs';
+import { Observable, catchError, map, retry, throwError } from 'rxjs';
 import { Culto } from 'src/app/models/culto.model';
 
 @Injectable({
@@ -8,8 +8,8 @@ import { Culto } from 'src/app/models/culto.model';
 })
 export class CultosService {
 
-  url = 'http://localhost:3000/cultos'; // api rest fake
-  //url = 'https://my-json-server.typicode.com/denisdmm/dbjsoncultosahava/cultos'; // api rest fake
+  //url = 'http://localhost:3000/cultos'; // api rest fake
+  url = 'https://my-json-server.typicode.com/denisdmm/dbjsoncultosahava/cultos'; // api rest fake
 
 
   constructor(private httpClient: HttpClient) { }
@@ -28,13 +28,18 @@ export class CultosService {
   }
 
   getCultosId(id: number): Observable<Culto[]> {
-
-    return this.httpClient.get<Culto[]>(this.url +'/'+id)
-      .pipe(
-        retry(2),
-        catchError(this.handleError))
-  }
-
+    return this.httpClient.get<Culto[]>(this.url + '/' + id)
+        .pipe(
+            map(response => {
+                if (!Array.isArray(response)) {
+                    return [response]; // Garante que a resposta seja um array
+                }
+                return response;
+            }),
+            retry(2),
+            catchError(this.handleError)
+        );
+      }
 
 
   handleError(error: HttpErrorResponse) {

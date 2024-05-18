@@ -27,8 +27,8 @@ export class CultoDetailComponent implements OnInit {
   }
 
   getCultoId(cultoId: number) {
-    this.cultoService.getCultosId(cultoId).subscribe((cultos: Culto[]) => {
-      this.cultosDetailAhava = cultos
+    this.cultoService.getCultosId(cultoId).subscribe((cultosDetail: Culto[]) => {
+      this.cultosDetailAhava = cultosDetail
     });
   }
 

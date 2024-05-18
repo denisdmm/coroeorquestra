@@ -53,9 +53,9 @@
     </div>
   </div>
 
-  <div class="card m-3 col-2" style="width: 18rem;" *ngFor="let culto of cultosAhava">
-    <div>
-      <img src="/assets/notes.jpg" style="width: 2.5em;" class="img-fluid" alt="...">
+  <div class="card m-3 col-2" style="width: 18rem;" *ngFor="let culto of cultosAhava" [hidden]="!isCultoAtivo(culto)">
+
+    <img src="/assets/notes.jpg" style="width: 2.5em;" class="img-fluid" alt="...">
 
       <div class="card-body col">
         <h5 class="card-title">Cultos {{ culto.localEvento }} - {{culto.ano}}</h5>
@@ -72,8 +72,3 @@
       </div>
     </div>
   </div>
-
-
-
-
-</div>
