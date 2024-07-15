@@ -12,6 +12,8 @@ import { HomeComponent } from './componentes/home/home.component';
 import { EnsaioComponent } from './componentes/atividades/ensaio/ensaio.component';
 import { CultoComponent } from './componentes/atividades/culto/culto.component';
 import { CultoDetailComponent } from './componentes/atividades/culto/culto-detail/culto-detail.component';
+import { EspeciaisComponent } from './componentes/atividades/especiais/especiais.component';
+import { EspecialDetailComponent } from './componentes/atividades/especiais/especial-detail/especial-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { CultoDetailComponent } from './componentes/atividades/culto/culto-detai
     EnsaioComponent,
     CultoComponent,
     CultoDetailComponent,
+    EspeciaisComponent,
+    EspecialDetailComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,37 @@
+<div class="container-lg w-auto p-3" *ngFor="let especialDetail of especiaisDetailAhava">
+  <div>
+    <figure class="text-center">
+      <blockquote class="blockquote">
+        <p>Especiais {{especialDetail.ano}}</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        <cite title="Source Title">Especiais Orquestra - {{especialDetail.nome}}</cite>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="text-left">
+    <h4>{{especialDetail.mesReferencia}}</h4>
+  </div>
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Música</th>
+          <th scope="col">Anotações</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let musica of especialDetail.musicas">
+          <td>{{musica.numeroCena}}</td>
+          <td><a href="{{musica.linkMusica}}" target="_blank" >{{musica.nomeMusica}}</a> </td>
+          <td class="text-dark">{{musica.anotacao}} </td>
+          <td>{{musica.status}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+</div>
