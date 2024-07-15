@@ -34,7 +34,7 @@
     </div>
   </div>
 
-  <div class="card m-3 col-2" style="width: 18rem;" >
+  <div class="card m-3 col-2" style="width: 18rem;" hidden>
     <img src="/assets/notes.jpg" style="width: 2.5em;" class="img-fluid" alt="...">
 
     <div class="card-body col">
@@ -57,18 +57,38 @@
 
     <img src="/assets/notes.jpg" style="width: 2.5em;" class="img-fluid" alt="...">
 
-      <div class="card-body col">
-        <h5 class="card-title">Cultos {{ culto.localEvento }} - {{culto.ano}}</h5>
-        <p class="card-text">
-          - {{culto.nome}}<br />
-          <br /><br />
-          <strong>{{culto.periodoEvento}}</strong><br />
-          Programe-se!!!!<br /><br />
-        </p>
+    <div class="card-body col">
+      <h5 class="card-title">Cultos {{ culto.localEvento }} - {{culto.ano}}</h5>
+      <p class="card-text">
+        - {{culto.nome}}<br />
+        <br /><br />
+        <strong>{{culto.periodoEvento}}</strong><br />
+        Programe-se!!!!<br /><br />
+      </p>
 
-        <div class="d-grid gap-2 d-md-flex justify-content-between">
-          <a href="/cultos/{{culto.id}}" class="btn btn-primary position-relative">Lista de Músicas</a>
-        </div>
+      <div class="d-grid gap-2 d-md-flex justify-content-between">
+        <a href="/cultos/{{culto.id}}" class="btn btn-primary position-relative">Lista de Músicas</a>
       </div>
     </div>
   </div>
+
+
+  <div class="card m-3 col-2" style="width: 18rem;" *ngFor="let especial of especiaisAhava" [hidden]="!isEspecialAtivo(especial)">
+
+    <img src="/assets/notes.jpg" style="width: 2.5em;" class="img-fluid" alt="...">
+
+    <div class="card-body col">
+      <h5 class="card-title">Especiais {{ especial.localEvento }} - {{especial.ano}}</h5>
+      <p class="card-text">
+        - {{especial.nome}}<br />
+        <br /><br />
+        <strong>{{especial.periodoEvento}}</strong><br />
+        Programe-se!!!!<br /><br />
+      </p>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-between">
+        <a href="/especiais/{{especial.id}}" class="btn btn-primary position-relative">Lista de Músicas</a>
+      </div>
+    </div>
+  </div>
+</div>
