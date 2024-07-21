@@ -63,17 +63,18 @@
         - {{culto.nome}}<br />
         <br /><br />
         <strong>{{culto.periodoEvento}}</strong><br />
-        Programe-se!!!!<br /><br />
+        {{culto.observacoes}}
       </p>
-
       <div class="d-grid gap-2 d-md-flex justify-content-between">
         <a href="/cultos/{{culto.id}}" class="btn btn-primary position-relative">Lista de Músicas</a>
+        <a href="culto.linkFormulario" class="btn btn-primary position-relative">Inscrições</a>
       </div>
     </div>
   </div>
 
 
-  <div class="card m-3 col-2" style="width: 18rem;" *ngFor="let especial of especiaisAhava" [hidden]="!isEspecialAtivo(especial)">
+  <div class="card m-3 col-2" style="width: 18rem;" *ngFor="let especial of especiaisAhava"
+    [hidden]="!isEspecialAtivo(especial)">
 
     <img src="/assets/notes.jpg" style="width: 2.5em;" class="img-fluid" alt="...">
 

@@ -10,7 +10,9 @@ export interface Culto {
     periodoEvento: string;
     mesReferencia: string;
     datasEvento: string;
-    musicas?: Musica[]
+    musicas?: Musica[];
+    observacoes?: string;
+    linkFormulario?: string;
 
 
 }
