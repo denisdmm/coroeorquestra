@@ -25,6 +25,10 @@ export class AuthService {
     }
   }
 
+  usuarioEstaAutenticado(){
+    return this.usuarioAutenticado
+  }
+
   logout() {
     this.usuarioAutenticado = false
     this.isAuthenticaded.emit(false)

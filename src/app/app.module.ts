@@ -14,9 +14,11 @@ import { CultoComponent } from './componentes/atividades/culto/culto.component';
 import { CultoDetailComponent } from './componentes/atividades/culto/culto-detail/culto-detail.component';
 import { EspeciaisComponent } from './componentes/atividades/especiais/especiais.component';
 import { EspecialDetailComponent } from './componentes/atividades/especiais/especial-detail/especial-detail.component';
-import { LoginComponent } from './componentes/login/componentes/login/login.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AuthService } from './componentes/login/auth.service';
+import { AuthGuard } from './guards/auth.guard';
+import { LoginComponent } from './componentes/login/login.component';
+import { UsuariosModule } from './componentes/usuarios/usuarios.module';
 
 @NgModule({
   declarations: [
@@ -41,11 +43,14 @@ import { AuthService } from './componentes/login/auth.service';
     FontAwesomeModule,
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UsuariosModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

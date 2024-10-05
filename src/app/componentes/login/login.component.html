@@ -8,21 +8,22 @@
       <div class="col-md-8 col-lg-6 col-xl-4 ">
 
         <div class="wrapper">
-          <div class="text-center mt-4 name">
+          <div class="text-center name">
             Acesso
           </div>
           <form class="p-3 mt-3"  (ngSubmit)="onSubmit()">
-            <div class="form-field d-flex align-items-cente form-group">
-              <i class="fa fa-user fa-2x fa-fw"></i>
+            <div class="form-field d-flex align-items-center form-group">
+              <i class="fa fa-user fa-2x fa-fw "></i>
               <input type="text" name="userName" id="userName"
               placeholder="Usuário" [(ngModel)]="login.username">
             </div>
             <div class="form-field d-flex align-items-center form-group">
-              <i class="fa fa-key fa-2x fa-fw"></i>
+              <i class="fa fa-key fa-2x fa-fw "></i>
               <input type="password" name="userPassword" id="pwd"
               placeholder="Senha" [(ngModel)]="login.userpassword" >
             </div>
             <button class="btn mt-3" type="submit" >Entrar</button>
+            <button class="btn btn-secondary btn-sm mt-3" >Cancelar</button>
           </form>
 
         </div>

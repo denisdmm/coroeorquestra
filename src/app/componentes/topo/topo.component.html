@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light z-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">CORO E ORQUESTRA</a>
+    <a class="navbar-brand" routerLink="">CORO E ORQUESTRA</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Início</a>
+          <a class="nav-link active" aria-current="page" routerLink="">Início</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -17,7 +17,7 @@
             Autos
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/autospascoa">2024</a></li>
+            <li><a class="dropdown-item" routerLink="/autospascoa">2024</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -32,7 +32,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" *ngFor="let culto of cultosAhava">
             <ng-container *ngFor="let culto of cultosAhava">
               <li [hidden]="!isCultoAtivo(culto)">
-                <a class="dropdown-item" href="/cultos/{{culto.id}}"> {{culto.localEvento +"/"+
+                <a class="dropdown-item" routerLink="/cultos/{{culto.id}}" > {{culto.localEvento +"/"+
                   culto.datasEvento +
                   culto.mesReferencia }} </a>
 
@@ -41,7 +41,7 @@
             </ng-container>
             <ng-container *ngFor="let especial of especiaisAhava">
               <li [hidden]="!isEspecialAtivo(especial)">
-                <a class="dropdown-item" href="/especiais/{{especial.id}}"> {{especial.localEvento +"/"+
+                <a class="dropdown-item" routerLink="/especiais/{{especial.id}}"> {{especial.localEvento +"/"+
                   especial.datasEvento +
                   especial.mesReferencia }} </a>
 
@@ -57,7 +57,7 @@
             Ensaios
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="/ensaios">Ensaios</a></li>
+            <li><a class="dropdown-item" routerLink="/ensaios">Ensaios</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -92,11 +92,11 @@
                 <span>Administração</span>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="#">Usuários</a></li>
+                <li><a class="dropdown-item" routerLink="/usuarios" >Usuários</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
-                <li><a class="dropdown-item" href="#">Eventos</a></li>
+                <li><a class="dropdown-item" routerLink="#">Eventos</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
@@ -105,15 +105,15 @@
           </li>
           <li class="nav-item flex-row">
             <span *ngIf="!isAuthenticaded">
-              <a class="nav-link active" aria-current="page" href="/acesso">
+              <a class="nav-link active" aria-current="page" routerLink="/acesso">
                 <i class="fa fa-user-circle-o fa-fw " aria-hidden="true"></i>
-                <span>Acesso</span>
+                <span>&nbsp;Acesso</span>
               </a>
             </span>
             <span *ngIf="isAuthenticaded">
               <a class="nav-link active" aria-current="page" href="#">
                 <i class="fa fa-user-circle-o fa-fw " aria-hidden="true"></i>
-                <span (click)="logout()">Sair</span>
+                <span (click)="logout()">&nbsp;Sair</span>
               </a>
             </span>
           </li>
