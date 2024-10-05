@@ -7,13 +7,16 @@ import { AppComponent } from './app.component';
 import { TopoComponent } from './componentes/topo/topo.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { AutopascoaComponent } from './componentes/atividades/autopascoa/autopascoa.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomeComponent } from './componentes/home/home.component';
 import { EnsaioComponent } from './componentes/atividades/ensaio/ensaio.component';
 import { CultoComponent } from './componentes/atividades/culto/culto.component';
 import { CultoDetailComponent } from './componentes/atividades/culto/culto-detail/culto-detail.component';
 import { EspeciaisComponent } from './componentes/atividades/especiais/especiais.component';
 import { EspecialDetailComponent } from './componentes/atividades/especiais/especial-detail/especial-detail.component';
+import { LoginComponent } from './componentes/login/componentes/login/login.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AuthService } from './componentes/login/auth.service';
 
 @NgModule({
   declarations: [
@@ -27,14 +30,22 @@ import { EspecialDetailComponent } from './componentes/atividades/especiais/espe
     CultoDetailComponent,
     EspeciaisComponent,
     EspecialDetailComponent,
+    LoginComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    FontAwesomeModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

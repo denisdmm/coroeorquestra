@@ -8,7 +8,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Início</a>
         </li>
 
         <li class="nav-item dropdown">
@@ -64,7 +64,6 @@
 
           </ul>
         </li>
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle disabled" href="#" id="navbarDropdown" role="button"
             data-bs-toggle="dropdown" aria-expanded="false">
@@ -73,10 +72,53 @@
           <ul class="dropdown-menu " aria-labelledby="navbarDropdown" aria-disabled="true">
             <li><a class="dropdown-item disabled" href="#">2024</a></li>
             <!-- <li><hr class="dropdown-divider"></li> -->
-
           </ul>
         </li>
       </ul>
+    </div>
+    <div class="d-flex flex-row-reverse">
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item flex-row">
+            <span *ngIf="isAuthenticaded">
+              <a class="nav-link disabled" aria-current="page" href="#"></a>
+            </span>
+          </li>
+          <li class="nav-item dropdown">
+            <span *ngIf="isAuthenticaded">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fa fa-briefcase fa-fw " aria-hidden="true"></i>
+                <span>Administração</span>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Usuários</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Eventos</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+              </ul>
+            </span>
+          </li>
+          <li class="nav-item flex-row">
+            <span *ngIf="!isAuthenticaded">
+              <a class="nav-link active" aria-current="page" href="/acesso">
+                <i class="fa fa-user-circle-o fa-fw " aria-hidden="true"></i>
+                <span>Acesso</span>
+              </a>
+            </span>
+            <span *ngIf="isAuthenticaded">
+              <a class="nav-link active" aria-current="page" href="#">
+                <i class="fa fa-user-circle-o fa-fw " aria-hidden="true"></i>
+                <span (click)="logout()">Sair</span>
+              </a>
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

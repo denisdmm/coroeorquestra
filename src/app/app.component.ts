@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './componentes/login/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'coroeorquestra';
+
+  isAuthenticaded: Boolean = false
+
+  constructor(
+    private authService: AuthService
+  ){}
+
+  ngOnInit(): void {
+    this.authService.isAuthenticaded.subscribe(
+      autenticado => this.isAuthenticaded = autenticado
+
+    );
+  }
 }

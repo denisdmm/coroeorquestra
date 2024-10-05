@@ -7,6 +7,7 @@ import { CultoComponent } from './componentes/atividades/culto/culto.component';
 import { CultoDetailComponent } from './componentes/atividades/culto/culto-detail/culto-detail.component';
 import { EspeciaisComponent } from './componentes/atividades/especiais/especiais.component';
 import { EspecialDetailComponent } from './componentes/atividades/especiais/especial-detail/especial-detail.component';
+import { LoginComponent } from './componentes/login/componentes/login/login.component';
 
 const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
     { path: 'cultos/:id', component: CultoDetailComponent},
     { path: 'especiais', component: EspeciaisComponent},
     { path: 'especiais/:id', component: EspecialDetailComponent},
+    { path: 'acesso', component: LoginComponent},
 ];
 
 @NgModule({
