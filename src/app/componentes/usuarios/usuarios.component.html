@@ -1,1 +1,34 @@
-<p>usuarios works!</p>
+<div class="container">
+<p>Usuários</p>
+
+<table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Email</th>
+        <th scope="col">Email</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <th scope="row">{{usuario.id}}</th>
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.email}}</td>
+        <td class="text-right">
+          <div class="btn-group  d-grid gap-2 d-md-flex justify-content-md-end" id="buttons">
+            <button class="btn btn-primary btn-sm ml-1 " routerLink="/usuarios/{{usuario.id}}" type="button">Editar</button>
+            <button class="btn btn-info btn-sm ml-1" type="button"  [routerLink]="'[usuarios/{{usuario.id}}]'">Exibir</button>
+            <button class="btn btn-danger btn-sm ml-1" type="button">Excluir</button>
+          </div>
+        </td>
+
+    </tbody>
+  </table>
+
+  <!-- <router-outlet></router-outlet> -->
+</div>
