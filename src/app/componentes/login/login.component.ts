@@ -12,17 +12,22 @@ export class LoginComponent implements OnInit {
   login: Login = new Login;
 
   constructor(
-    private authService : AuthService
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
 
   }
 
-  onSubmit() {
+  async onSubmit() {
     // aqui você pode implementar a logica para fazer seu formulário salvar
     // console.log(this.login);
-    this.authService.validarLogin(this.login);
+    try {
+      const resultLogin = await this.authService.validarLogin(this.login);
+      // console.log(resultLogin);
+    } catch (error) {
+      console.log(error);
+    }
 
   }
 
