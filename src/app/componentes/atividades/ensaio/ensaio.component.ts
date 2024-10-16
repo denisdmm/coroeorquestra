@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Ensaio } from 'src/app/models/ensaio.model';
-import { Musica } from 'src/app/models/musica';
+import { Musica } from 'src/app/models/musica.model';
 import { EnsaioService } from 'src/app/services/ensaio/ensaio.service';
 
 @Component({

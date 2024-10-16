@@ -3,11 +3,12 @@ import { Autopascoa } from 'src/app/models/autopascoa';
 import { Culto } from 'src/app/models/culto.model';
 import { Ensaio } from 'src/app/models/ensaio.model';
 import { Especial } from 'src/app/models/especial.model';
-import { Musica } from 'src/app/models/musica';
+import { Musica } from 'src/app/models/musica.model';
 import { AutoPascoaService } from 'src/app/services/auto-pascoa.service';
 import { CultosService } from 'src/app/services/cultos/cultos.service';
 import { EnsaioService } from 'src/app/services/ensaio/ensaio.service';
 import { EspeciaisService } from 'src/app/services/especiais/especiais.service';
+import { AuthService } from '../login/auth.service';
 
 @Component({
   selector: 'app-topo',
@@ -25,16 +26,21 @@ export class TopoComponent implements OnInit {
   especiaisAhava: Especial[] = [];
   musica = {} as Musica;
   musicas!: Musica[];
+  isAuthenticaded: Boolean = false
   constructor(
     private autopascoaService: AutoPascoaService,
     private ensaioService: EnsaioService,
     private cultoService: CultosService,
-    private especiaisService: EspeciaisService
+    private especiaisService: EspeciaisService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
+    this.authService.isAuthenticaded.subscribe(
+      autenticado => this.isAuthenticaded = autenticado)
     this.getCultos()
     this.getEspecias()
+
   }
 
       // Chama o serviço para obtém todos os cultos
@@ -58,5 +64,8 @@ export class TopoComponent implements OnInit {
         return especial.ativo;
       }
 
+      logout(){
+          this.authService.logout()
 
+      }
 }

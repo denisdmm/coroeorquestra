@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="d-flex justify-content-between">
+  <h2 id="page-heading">
+    <span jhiTranslate="hercules2App.ordem.home.title">Usuários</span>
+  </h2>
+  <span >
+        <button
+
+            id="jh-create-entity"
+            class="btn btn-primary float-right jh-create-entity create-ordem" (click)="openUsuarioNewPopUp()">
+            <i class="fa fa-plus"></i>
+            <span class="hidden-sm-down">
+                Novo Usuário
+            </span>
+        </button>
+    </span>
+
+  </div>
+  <hr>
+<table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Email</th>
+        <th scope="col">Email</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios">
+        <th scope="row">{{usuario.id}}</th>
+        <td>{{usuario.nome}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.email}}</td>
+        <td>{{usuario.email}}</td>
+        <td class="text-right">
+          <div class="btn-group  d-grid gap-2 d-md-flex justify-content-md-end" id="buttons">
+            <button class="btn btn-primary btn-sm ml-1 " routerLink="/usuarios/{{usuario.id}}" type="button">Editar</button>
+            <button class="btn btn-info btn-sm ml-1" type="button"  [routerLink]="'[usuarios/{{usuario.id}}]'">Exibir</button>
+            <button class="btn btn-danger btn-sm ml-1" type="button">Excluir</button>
+          </div>
+        </td>
+
+    </tbody>
+  </table>
+
+  <!-- <router-outlet></router-outlet> -->
+</div>

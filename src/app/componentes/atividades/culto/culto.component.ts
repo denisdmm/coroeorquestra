@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Culto } from 'src/app/models/culto.model';
-import { Musica } from 'src/app/models/musica';
+import { Musica } from 'src/app/models/musica.model';
 import { CultosService } from 'src/app/services/cultos/cultos.service';
 
 @Component({
