@@ -3,7 +3,7 @@ import { Autopascoa } from 'src/app/models/autopascoa';
 import { Culto } from 'src/app/models/culto.model';
 import { Ensaio } from 'src/app/models/ensaio.model';
 import { Especial } from 'src/app/models/especial.model';
-import { Musica } from 'src/app/models/musica';
+import { Musica } from 'src/app/models/musica.model';
 import { AutoPascoaService } from 'src/app/services/auto-pascoa.service';
 import { CultosService } from 'src/app/services/cultos/cultos.service';
 import { EnsaioService } from 'src/app/services/ensaio/ensaio.service';

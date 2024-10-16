@@ -1,6 +1,22 @@
 <div class="container">
-<p>Usuários</p>
+  <div class="d-flex justify-content-between">
+  <h2 id="page-heading">
+    <span jhiTranslate="hercules2App.ordem.home.title">Usuários</span>
+  </h2>
+  <span >
+        <button
 
+            id="jh-create-entity"
+            class="btn btn-primary float-right jh-create-entity create-ordem" (click)="openUsuarioNewPopUp()">
+            <i class="fa fa-plus"></i>
+            <span class="hidden-sm-down">
+                Novo Usuário
+            </span>
+        </button>
+    </span>
+
+  </div>
+  <hr>
 <table class="table table-hover table-striped">
     <thead>
       <tr>
