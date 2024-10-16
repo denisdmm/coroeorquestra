@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopoComponent } from './componentes/topo/topo.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
@@ -20,37 +20,30 @@ import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './componentes/login/login.component';
 import { UsuariosModule } from './componentes/usuarios/usuarios.module';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    TopoComponent,
-    RodapeComponent,
-    AutopascoaComponent,
-    HomeComponent,
-    EnsaioComponent,
-    CultoComponent,
-    CultoDetailComponent,
-    EspeciaisComponent,
-    EspecialDetailComponent,
-    LoginComponent,
-
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    FontAwesomeModule,
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    UsuariosModule
-  ],
-  providers: [
-    AuthService,
-    AuthGuard
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        TopoComponent,
+        RodapeComponent,
+        AutopascoaComponent,
+        HomeComponent,
+        EnsaioComponent,
+        CultoComponent,
+        CultoDetailComponent,
+        EspeciaisComponent,
+        EspecialDetailComponent,
+        LoginComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        FontAwesomeModule,
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        UsuariosModule], providers: [
+        AuthService,
+        AuthGuard,
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
 
