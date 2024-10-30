@@ -77,7 +77,9 @@
               "buildTarget": "coroeorquestra:build:production"
             },
             "development": {
-              "buildTarget": "coroeorquestra:build:development"
+              "buildTarget": "coroeorquestra:build:development",
+              "proxyConfig": "src/proxy.conf.js"
+
             }
           },
           "defaultConfiguration": "development"

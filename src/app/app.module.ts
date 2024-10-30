@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { TopoComponent } from './componentes/topo/topo.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
@@ -15,12 +14,16 @@ import { CultoDetailComponent } from './componentes/atividades/culto/culto-detai
 import { EspeciaisComponent } from './componentes/atividades/especiais/especiais.component';
 import { EspecialDetailComponent } from './componentes/atividades/especiais/especial-detail/especial-detail.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { AuthService } from './componentes/login/auth.service';
+import { AuthService } from './auth/auth.service';
 import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './componentes/login/login.component';
 import { UsuariosModule } from './componentes/usuarios/usuarios.module';
+import { InterceptorService } from './auth/interceptor.service';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-@NgModule({ declarations: [
+@NgModule({
+
+  declarations: [
         AppComponent,
         TopoComponent,
         RodapeComponent,
@@ -33,17 +36,25 @@ import { UsuariosModule } from './componentes/usuarios/usuarios.module';
         EspecialDetailComponent,
         LoginComponent,
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent],
+
+    imports: [BrowserModule,
         AppRoutingModule,
         FormsModule,
         FontAwesomeModule,
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,
-        UsuariosModule], providers: [
+        UsuariosModule
+
+      ],
+
+        providers: [
         AuthService,
         AuthGuard,
-        provideHttpClient(withInterceptorsFromDi())
-    ] })
+        provideHttpClient(withInterceptorsFromDi()), // Novo padrão para configurar HTTP com interceptores
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
+    ]
+  })
 export class AppModule { }
 
