@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UsuariosService } from '../../usuarios.service';
-import { AuthService } from 'src/app/componentes/login/auth.service';
+import { AuthService } from 'src/app/auth/auth.service';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -11,7 +11,7 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrl: './usuario-update.component.css'
 })
 export class UsuarioUpdateComponent {
-  isAuthenticaded: Boolean = false
+
 
   constructor(
     private authService: AuthService,

@@ -14,13 +14,13 @@
           <form class="p-3 mt-3"  (ngSubmit)="onSubmit()" #form="ngForm">
             <div class="form-field d-flex align-items-center form-group">
               <i class="fa fa-user fa-2x fa-fw "></i>
-              <input type="text" name="userName" id="userName"
-              placeholder="Usuário" [(ngModel)]="login.username" required />
+              <input type="text" name="loginName" id="loginName"
+              placeholder="Usuário" [(ngModel)]="login.loginName" required />
             </div>
             <div class="form-field d-flex align-items-center form-group">
               <i class="fa fa-key fa-2x fa-fw "></i>
-              <input type="password" name="userPassword" id="pwd"
-              placeholder="Senha" [(ngModel)]="login.userpassword" required>
+              <input type="password" name="senha" id="senha"
+              placeholder="Senha" [(ngModel)]="login.senha" required>
             </div>
             <button class="btn mt-3" type="submit" [disabled]="form.form.invalid">Entrar</button>
             <button class="btn btn-secondary btn-sm mt-3" [routerLink]="'/'">Cancelar</button>
