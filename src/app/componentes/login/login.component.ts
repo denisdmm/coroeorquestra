@@ -20,7 +20,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void { }
 
   async onSubmit() {
-    console.log(this.login)
     this.authService.validarLogin(this.login).subscribe({
       next: () => {
         this.router.navigate(['/']); // redireciona para a página principal
