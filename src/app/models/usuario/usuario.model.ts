@@ -10,11 +10,11 @@ import { EmailValidator } from '@angular/forms';
     CommonModule
   ]
 })
-export class UsuarioModule {
+export class UsuarioModel {
   id?: number;
   isActive?: boolean;
   nomeUsuario?: string;
-  sobrenomeUsuario?: string;
+  sobrenome?: string;
   cpf? : number;
   senha?: number;
   email?: EmailValidator

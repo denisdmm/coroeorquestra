@@ -14,10 +14,7 @@ import { AuthGuard } from './guards/auth.guard';
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'autospascoa', component: AutopascoaComponent},
-    { path: 'ensaios', component: EnsaioComponent,
-      canActivate: [AuthGuard]
-
-    },
+    { path: 'ensaios', component: EnsaioComponent},
     { path: 'cultos', component: CultoComponent},
     { path: 'cultos/:id', component: CultoDetailComponent},
     { path: 'especiais', component: EspeciaisComponent},

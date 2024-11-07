@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from 'src/app/shared/models/login';
-import { AuthService } from './auth.service';
+import { AuthService } from '../../auth/auth.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,23 +13,22 @@ export class LoginComponent implements OnInit {
   login: Login = new Login;
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router,
   ) { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void { }
 
   async onSubmit() {
-    // aqui você pode implementar a logica para fazer seu formulário salvar
-    // console.log(this.login);
-    try {
-      const resultLogin = await this.authService.validarLogin(this.login);
-      // console.log(resultLogin);
-    } catch (error) {
-      console.log(error);
-    }
-
+    this.authService.validarLogin(this.login).subscribe({
+      next: () => {
+        this.router.navigate(['/']); // redireciona para a página principal
+        // Redireciona ou atualiza a interface, pois o login foi bem-sucedido e os tokens já estão armazenados.
+      },
+      error: (err) => {
+        alert(err.message);
+      },
+    });
   }
 
 }
