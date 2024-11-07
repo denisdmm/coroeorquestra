@@ -40,6 +40,7 @@ export class AuthService {
   }
 
   validarLogin(login: any): Observable<any> {
+    console.log(login)
     return this.http.post<any>(`${this.apiUrl}/auth/login`, login).pipe(
       tap((response: { accessToken: string; refreshToken: string; }) => {
         if (response.accessToken && response.refreshToken) {
