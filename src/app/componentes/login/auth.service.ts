@@ -26,7 +26,7 @@ export class AuthService {
     }
   }
 
-  usuarioEstaAutenticado(){
+  usuarioEstaAutenticado() {
     return this.usuarioAutenticado
   }
 
