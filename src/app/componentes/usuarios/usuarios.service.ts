@@ -11,7 +11,7 @@ import { environment } from 'src/environments/environment';
 export class UsuariosService {
 
   private readonly API = '/api/usuarios';
-  private apiUrl = environment.apiUrl;
+  private readonly apiUrl = environment.apiUrl;
   constructor(
     private http: HttpClient
   ) { }
