@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { UsuariosModule } from './usuarios.module';
 import { catchError, Observable, retry, throwError } from 'rxjs';
 import { UsuarioModel } from 'src/app/models/usuario/usuario.model';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,20 +11,20 @@ import { UsuarioModel } from 'src/app/models/usuario/usuario.model';
 export class UsuariosService {
 
   private readonly API = 'api/usuarios';
-
+  private apiUrl = environment.apiUrl;
   constructor(
     private http: HttpClient
   ) { }
 
   getUsuarios(): Observable<UsuarioModel[]> {
-    return this.http.get<UsuariosModule[]>(this.API)
+    return this.http.get<UsuariosModule[]>(`${this.apiUrl}`+this.API)
       .pipe(
         retry(2),
         catchError(this.handleError))
   }
 
   deleteUsuarios(user: UsuarioModel){
-      return this.http.delete<UsuarioModel> (this.API+ '/'+ user.id)
+      return this.http.delete<UsuarioModel> (`${this.apiUrl}`+this.API+ '/'+ user.id)
       .pipe(
         retry(2),
         catchError(this.handleError)
