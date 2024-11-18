@@ -13,12 +13,17 @@ import { EmailValidator } from '@angular/forms';
 export class UsuarioModel {
   id?: number;
   isActive?: boolean;
-  nomeUsuario?: string;
-  sobrenome?: string;
+  nome?: string;
+  nomeAbreviado?: string;
   cpf? : number;
   senha?: number;
   email?: EmailValidator
   dataNascimento?: Date;
-
+  instrumento?: string;
+  dataVencimento?: Date;
+  membroIC?: boolean;
+  autorizadoPastor?: boolean;
+  contratoObrigatorio?: boolean;
+  loginName?: string;
 
  }

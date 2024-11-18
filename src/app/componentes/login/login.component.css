@@ -79,6 +79,13 @@ body {
     color: #039BE5;
 }
 
+/* Cor do texto do autocomplete */
+.wrapper .form-field input:-webkit-autofill {
+  /* -webkit-text-fill-color: blue !important; */
+  -webkit-box-shadow: 0 0 0 30px #edf1f4 inset;
+  -webkit-border-radius:20px;
+}
+
 @media(max-width: 380px) {
     .wrapper {
         margin: 30px 10px;

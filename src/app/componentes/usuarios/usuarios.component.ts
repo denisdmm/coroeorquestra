@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { UsuariosService } from './usuarios.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { UsuarioUpdateComponent } from './update/usuario-update/usuario-update.component';
 import { UsuarioModel } from 'src/app/models/usuario/usuario.model';
 import { catchError, of, tap } from 'rxjs';
@@ -12,10 +12,12 @@ import { catchError, of, tap } from 'rxjs';
 })
 export class UsuariosComponent implements OnInit {
   usuarios: UsuarioModel[] = []
+  private modalRef: NgbModalRef | null = null;
+
   constructor(
     private authService: AuthService,
     private usuariosService: UsuariosService,
-    protected modalService: NgbModal,
+    private modalService: NgbModal,
   ) { }
 
   ngOnInit(): void {

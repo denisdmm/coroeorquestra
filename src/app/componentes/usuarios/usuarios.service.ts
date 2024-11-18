@@ -32,6 +32,10 @@ export class UsuariosService {
 
   }
 
+  saveUser(user: UsuarioModel): Observable<UsuarioModel> {
+    return this.http.post<UsuarioModel>(`${this.apiUrl}`+this.API+ '/', user);
+  }
+
   handleError(error: HttpErrorResponse) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
