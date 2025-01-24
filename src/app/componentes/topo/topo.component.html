@@ -17,7 +17,7 @@
             Autos
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" routerLink="/autospascoa">2024</a></li>
+            <li><a class="dropdown-item" routerLink="/autospascoa">2025</a></li>
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -32,7 +32,7 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" *ngFor="let culto of cultosAhava">
             <ng-container *ngFor="let culto of cultosAhava">
               <li [hidden]="!isCultoAtivo(culto)">
-                <a class="dropdown-item" routerLink="/cultos/{{culto.id}}" > {{culto.localEvento +"/"+
+                <a class="dropdown-item" routerLink="/cultos/{{culto.id}}"> {{culto.localEvento +"/"+
                   culto.datasEvento +
                   culto.mesReferencia }} </a>
 
@@ -92,7 +92,7 @@
                 <span>Administração</span>
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" routerLink="/usuarios" >Usuários</a></li>
+                <li><a class="dropdown-item" routerLink="/usuarios">Usuários</a></li>
                 <li>
                   <hr class="dropdown-divider">
                 </li>
