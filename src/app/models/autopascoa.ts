@@ -1,7 +1,7 @@
 import { Musica } from "./musica.model";
 
 export interface Autopascoa {
-    anos: number;
+    ano: number;
     nome: string;
     musicas?: Musica[]
 
