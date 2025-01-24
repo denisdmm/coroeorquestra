@@ -3,11 +3,13 @@ import { Autopascoa } from 'src/app/models/autopascoa';
 import { Culto } from 'src/app/models/culto.model';
 import { Ensaio } from 'src/app/models/ensaio.model';
 import { Especial } from 'src/app/models/especial.model';
-import { Musica } from 'src/app/models/musica';
+import { Musica } from 'src/app/models/musica.model';
 import { AutoPascoaService } from 'src/app/services/auto-pascoa.service';
 import { CultosService } from 'src/app/services/cultos/cultos.service';
 import { EnsaioService } from 'src/app/services/ensaio/ensaio.service';
 import { EspeciaisService } from 'src/app/services/especiais/especiais.service';
+import { AuthService } from '../../auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-topo',
@@ -25,38 +27,51 @@ export class TopoComponent implements OnInit {
   especiaisAhava: Especial[] = [];
   musica = {} as Musica;
   musicas!: Musica[];
+
   constructor(
     private autopascoaService: AutoPascoaService,
     private ensaioService: EnsaioService,
+    private router: Router,
     private cultoService: CultosService,
-    private especiaisService: EspeciaisService
+    private especiaisService: EspeciaisService,
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
-    this.getCultos()
-    this.getEspecias()
+    if (this.isAuthenticated()) {
+      this.getCultos();
+      this.getEspecias();
+    }
   }
 
-      // Chama o serviço para obtém todos os cultos
-      getCultos() {
-        this.cultoService.getCultos().subscribe((cultos: Culto[]) => {
-          this.cultosAhava = cultos
-        });
-      }
+  isAuthenticated(): boolean {
+    return this.authService.isLoggedIn();
+  }
 
-      getEspecias() {
-        this.especiaisService.getEspeciais().subscribe((especiais: Especial[]) => {
-          this.especiaisAhava = especiais
-        });
-      }
+  // Chama o serviço para obtém todos os cultos
+  getCultos() {
+    this.cultoService.getCultos().subscribe((cultos: Culto[]) => {
+      this.cultosAhava = cultos
+    });
+  }
 
-      isCultoAtivo(culto: Culto): boolean {
-        return culto.ativo;
-      }
+  getEspecias() {
+    this.especiaisService.getEspeciais().subscribe((especiais: Especial[]) => {
+      this.especiaisAhava = especiais
+    });
+  }
 
-      isEspecialAtivo(especial: Especial): boolean {
-        return especial.ativo;
-      }
+  isCultoAtivo(culto: Culto): boolean {
+    return culto.ativo;
+  }
 
+  isEspecialAtivo(especial: Especial): boolean {
+    return especial.ativo;
+  }
 
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/']); // redireciona para a página principal
+
+  }
 }

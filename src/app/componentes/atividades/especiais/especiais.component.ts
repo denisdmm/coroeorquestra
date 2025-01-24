@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Especial } from 'src/app/models/especial.model';
-import { Musica } from 'src/app/models/musica';
+import { Musica } from 'src/app/models/musica.model';
 import { EspeciaisService } from 'src/app/services/especiais/especiais.service';
 
 @Component({

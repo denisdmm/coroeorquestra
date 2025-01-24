@@ -2,7 +2,7 @@
   <div >
     <figure class="text-center">
       <blockquote class="blockquote">
-        <p>Auto de Páscoa 2024</p>
+        <p>Auto de Páscoa {{auto.ano}}</p>
       </blockquote>
       <figcaption class="blockquote-footer">
         <cite title="Source Title">{{auto.nome}}</cite>
@@ -22,8 +22,18 @@
       <tbody>
         <tr *ngFor="let musica of auto.musicas">
           <td>{{musica.numeroCena}}</td>
-          <td><a href="{{musica.linkMusica}}" target="_blank" >{{musica.nomeMusica}}</a> </td>
-          <td class="text-dark">{{musica.anotacao}}</td>
+          <td>
+            @if (musica.status === "OK") {
+            <a class="text-dark" href="{{musica.linkMusica}}" target="_blank" >{{musica.nomeMusica}}</a> 
+            } @else {
+              <span>
+                <p class="text-muted">{{musica.nomeMusica}}</p>
+              </span>
+
+            }
+          
+          </td>
+          <td class="font-weight-bold text-dark">{{musica.anotacao}}</td>
           <td>{{musica.status}}</td>
         </tr>
       </tbody>

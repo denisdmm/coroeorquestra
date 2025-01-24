@@ -1,0 +1,38 @@
+<section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5" id="img-banner-login">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid"
+          alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 ">
+
+        <div class="wrapper">
+          <div class="text-center name">
+            <h2 class="text-center"> Acesso </h2>
+          </div>
+          <form class="p-3 mt-3"  (ngSubmit)="onSubmit()" #form="ngForm">
+            <div class="form-field d-flex align-items-center form-group">
+              <i class="fa fa-user fa-2x fa-fw "></i>
+              <input type="text" name="loginName" id="loginName"
+              placeholder="Usuário" [(ngModel)]="login.loginName" required />
+            </div>
+            <div class="form-field d-flex align-items-center form-group">
+              <i class="fa fa-key fa-2x fa-fw "></i>
+              <input type="password" name="senha" id="senha"
+              placeholder="Senha" [(ngModel)]="login.senha" required>
+            </div>
+            <button class="btn mt-3" type="submit" [disabled]="form.form.invalid">Entrar</button>
+            <button class="btn btn-secondary btn-sm mt-3" [routerLink]="'/'">Cancelar</button>
+          </form>
+
+        </div>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+</section>

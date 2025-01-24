@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Autopascoa } from 'src/app/models/autopascoa';
-import { Musica } from 'src/app/models/musica';
+import { Musica } from 'src/app/models/musica.model';
 import { AutoPascoaService } from 'src/app/services/auto-pascoa.service';
 
 @Component({
