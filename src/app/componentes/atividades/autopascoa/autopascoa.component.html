@@ -1,5 +1,5 @@
 <div class="container-lg w-auto p-3" *ngFor="let auto of autosPascoa">
-  <div >
+  <div>
     <figure class="text-center">
       <blockquote class="blockquote">
         <p>Auto de Páscoa {{auto.ano}}</p>
@@ -24,14 +24,16 @@
           <td>{{musica.numeroCena}}</td>
           <td>
             @if (musica.status === "OK") {
-            <a class="text-dark" href="{{musica.linkMusica}}" target="_blank" >{{musica.nomeMusica}}</a> 
+            <div class="d-flex flex-row">
+              <div class="me-3"><i class="fa fa-circle fa-2x" style="color: #00a34c;"></i> </div>
+              <div><a class="text-dark" href="{{musica.linkMusica}}" target="_blank">{{musica.nomeMusica}}</a></div>
+            </div>
             } @else {
-              <span>
-                <p class="text-muted">{{musica.nomeMusica}}</p>
-              </span>
-
+              <div class="d-flex flex-row">
+                <div class="me-3"><i class="fa fa-circle fa-2x" style="color: #e40000;"></i> </div>
+              <div><p class="text-muted">{{musica.nomeMusica}}</p></div>
+              </div>
             }
-          
           </td>
           <td class="font-weight-bold text-dark">{{musica.anotacao}}</td>
           <td>{{musica.status}}</td>
