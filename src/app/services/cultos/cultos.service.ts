@@ -10,7 +10,8 @@ export class CultosService {
 
   //url = 'http://localhost:3000/cultos'; // api rest fake
   // url = 'https://my-json-server.typicode.com/denisdmm/dbjsoncultosahava/cultos'; // api rest fake
-  url = 'https://my-json-server.typicode.com/denisdmm//dbCultosAhava0724/cultos'; // api rest fake
+  //url = 'https://my-json-server.typicode.com/denisdmm//dbCultosAhava0724/cultos'; // api rest fake
+  url = 'https://my-json-server.typicode.com/denisdmm//culto1Sem2025/cultos'; // api rest fake
 
 
   constructor(private httpClient: HttpClient) { }
